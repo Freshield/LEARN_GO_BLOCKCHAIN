@@ -17,9 +17,9 @@ package main
 
 import "fmt"
 
-type Animal interface {
-	GetName() string
-}
+//type Animal interface {
+//	GetName() string
+//}
 
 type Cat struct {
 	name string
@@ -42,8 +42,8 @@ func main() {
 		name: "hello kitty",
 	}
 
-	animal := Animal(&cat)
-	fmt.Println(animal.GetName())
+	//animal := Animal(&cat)
+	//fmt.Println(animal.GetName())
 
 	dog1 := Dog(cat)
 	fmt.Println(dog1.GetName())
