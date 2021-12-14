@@ -17,22 +17,12 @@ package main
 
 import (
 	"chp3/block"
-	"fmt"
-	"strconv"
 )
 
 func main() {
 	bc := block.NewBlockchain()
-	bc.AddBlock("Send 1 BTC to Ivan")
-	bc.AddBlock("Send 2 more BTC to Ivan")
+	defer bc.DB.Close()
 
-	for _, b := range bc.Blocks {
-		fmt.Printf("Prev. hash:%64x\n", b.PrevBlockHash)
-		fmt.Printf("Data:      %s\n", b.Data)
-		fmt.Printf("Hash:      %64x\n", b.Hash)
-
-		pow := block.NewProofOfWork(b)
-		fmt.Printf("POW: %s\n", strconv.FormatBool(pow.Validatae()))
-		fmt.Println()
-	}
+	cli := block.CLI{bc}
+	cli.Run()
 }
