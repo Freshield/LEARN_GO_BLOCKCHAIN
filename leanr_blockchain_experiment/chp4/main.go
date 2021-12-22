@@ -18,9 +18,6 @@ package main
 import "chp4/block"
 
 func main() {
-	bc := block.NewBlockchain()
-	defer bc.DB.Close()
-
-	cli := block.CLI{bc}
+	cli := block.CLI{}
 	cli.Run()
 }
