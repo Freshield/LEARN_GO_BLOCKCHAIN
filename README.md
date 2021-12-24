@@ -1,5 +1,7 @@
-# LEARN_GO_BLOCKCHAIN
-====
+
+LEARN_GO_BLOCKCHAIN
+===================
+
 ## 简介
 本项目主要是在于学习使用GO来实现区块链相关的学习，目前主要是在看learn_blockchain_experiment里的相关项目，这个项目的链接是[这里](https://github.com/liuchengxu/blockchain-tutorial) 。
 
