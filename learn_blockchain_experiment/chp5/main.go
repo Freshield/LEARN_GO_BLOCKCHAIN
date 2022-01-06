@@ -15,9 +15,18 @@
 */
 package main
 
-import "chp5/block"
+import (
+	"chp5/block"
+	"fmt"
+)
 
 func main() {
-	cli := block.CLI{}
-	cli.Run()
+	//cli := block.CLI{}
+	//cli.Run()
+	wallet := block.NewWallet()
+	address := wallet.GetAddress()
+	fmt.Println(address)
+	fmt.Println(string(address))
+	fmt.Println(wallet.PublicKey)
+	fmt.Println(block.Base58Decode(address))
 }
